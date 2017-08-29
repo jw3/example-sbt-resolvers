@@ -1,0 +1,14 @@
+sudo: required
+services:
+  - docker
+
+language: scala
+scala:
+  - 2.11.11
+jdk:
+  - oraclejdk8
+
+before_install:
+  - chmod +x scripts/travis.sh
+script:
+  - sbt compile
