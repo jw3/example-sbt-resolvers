@@ -8,7 +8,6 @@ scala:
 jdk:
   - oraclejdk8
 
-before_install:
-  - chmod +x scripts/travis.sh
 script:
   - sbt compile
+  - sbt docker:publishLocal
